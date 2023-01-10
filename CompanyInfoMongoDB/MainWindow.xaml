@@ -5,38 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CompanyInfoMongoDB"
         mc:Ignorable="d"
-        Title="CompanyInfo" Height="460" Width="800" Background="SlateGray">
+        Title="CompanyInfo" Height="460" Width="850" Background="SlateGray">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"></RowDefinition>
-            <RowDefinition Height="430*"></RowDefinition>
-            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="415*"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"></ColumnDefinition>            
+            <ColumnDefinition Width="10"></ColumnDefinition>
             <ColumnDefinition Width="780*"></ColumnDefinition>
             <ColumnDefinition Width="10"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TabControl Grid.Column="1" Grid.Row="1" TabStripPlacement="Left" BorderBrush="Black" BorderThickness="2">          
-           
+        <TabControl Grid.Column="1" Grid.Row="1" TabStripPlacement="Left" BorderBrush="Black" BorderThickness="2">
+
             <TabItem Header="Companies" Background="SlateGray" FontSize="16" FontWeight="DemiBold" BorderBrush="Black" BorderThickness="3">
                 <Grid Background="SlateGray" >
                     <TabControl  BorderBrush="Black" BorderThickness="3">
-                        <TabItem Header="Show" Background="SlateGray">
-                            <Grid Background="SlateGray"/>
+                        <TabItem Header="   Display   " Background="SlateGray">
+                            <Grid Background="SlateGray">
+                                <DataGrid Name="allCompaniesDG" HorizontalAlignment="Left" Height="239" Margin="10,20,0,0" VerticalAlignment="Top" Width="616" />
+                                <Button Name="showAllCompanies" Content="Show All Companies" HorizontalAlignment="Left" Height="26" Margin="218,296,0,0" VerticalAlignment="Top" Width="172"/>
+                            </Grid>
                         </TabItem>
-                        <TabItem Header="Search" Background="SlateGray">
-                            <Grid Background="SlateGray"/>
+                        <TabItem Header="   Operations   " Background="SlateGray" Height="25" VerticalAlignment="Bottom">
+                            <Grid Background="SlateGray">
+                                <Label Content="Insert Company id, &#10;name or organisation number &#10;to find the desired company :"  FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Left" Height="68" Margin="10,10,0,0" VerticalAlignment="Top" Width="204"/>
+                                <TextBox Name="searchC_textBox"  HorizontalAlignment="Left" Height="34" Margin="10,78,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204"/>
+                                <Button Name="searchCompany" Content="Search" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Width="204" Height="34"/>
+                                <Label Content="Use the fields below to insert, update or remove!" HorizontalContentAlignment="Center" Height="32" Margin="238,24,15,0" VerticalAlignment="Top"/>
+                                <Label Content="Company Name:" HorizontalAlignment="Left" Height="34" Margin="264,117,0,0" VerticalAlignment="Top" Width="135"/>
+                                <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="359" Margin="228,0,0,0" VerticalAlignment="Center" Width="5"/>
+                                <Label Content="Org. Number:" HorizontalAlignment="Left" Margin="264,156,0,0" VerticalAlignment="Top" Width="135" Height="34"/>
+                                <Label Content="Main Office:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Height="34" Margin="264,195,0,0" />
+                                <Label Content="Company ID:" HorizontalAlignment="Left" Margin="264,78,0,0" VerticalAlignment="Top" Width="135" Height="34"/>
+                                <TextBox HorizontalAlignment="Left" Margin="404,78,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="226" Height="34"/>
+                                <TextBox HorizontalAlignment="Left" Margin="404,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Height="34"/>
+                                <TextBox HorizontalAlignment="Left" Margin="404,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Height="34"/>
+                                <TextBox HorizontalAlignment="Left" Margin="404,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Height="34"/>
+                                <Button Content="Insert new" HorizontalAlignment="Left" Height="34" Margin="10,195,0,0" VerticalAlignment="Top" Width="204"/>
+                                <Button Content="Update" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="204" Height="34"/>
+                                <Button Content="Delete" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top" Width="204" Height="34"/>
+                                <Label Content="Hint!&#10;To remove or update you need to &#10;search for a database entry first!" FontSize="12" FontWeight="Normal"  HorizontalAlignment="Left" Margin="404,274,0,0" VerticalAlignment="Top" Width="226" Height="57"/>
+
+
+                            </Grid>
                         </TabItem>
-                        <TabItem Header="Insert" Background="SlateGray">
-                            <Grid Background="SlateGray"/>
-                        </TabItem>
-                        <TabItem Header="Update" Background="SlateGray">
-                            <Grid Background="SlateGray"/>
-                        </TabItem>
-                        <TabItem Header="Remove" Background="SlateGray">
-                            <Grid Background="SlateGray"/>
-                        </TabItem>
+                        
                     </TabControl>
                 </Grid>
             </TabItem>
@@ -83,6 +98,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Label Grid.Column="1" Content="Copyright by Ionut-Catalin Luca" FontSize="10" HorizontalAlignment="Right" Margin="615,406,0,0" Grid.Row="1" VerticalAlignment="Top" Width="205" Height="25" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>
