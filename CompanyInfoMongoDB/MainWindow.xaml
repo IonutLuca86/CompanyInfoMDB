@@ -1,0 +1,88 @@
+﻿<Window x:Class="CompanyInfoMongoDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CompanyInfoMongoDB"
+        mc:Ignorable="d"
+        Title="CompanyInfo" Height="460" Width="800" Background="SlateGray">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="430*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>            
+            <ColumnDefinition Width="780*"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.Column="1" Grid.Row="1" TabStripPlacement="Left" BorderBrush="Black" BorderThickness="2">          
+           
+            <TabItem Header="Companies" Background="SlateGray" FontSize="16" FontWeight="DemiBold" BorderBrush="Black" BorderThickness="3">
+                <Grid Background="SlateGray" >
+                    <TabControl  BorderBrush="Black" BorderThickness="3">
+                        <TabItem Header="Show" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Search" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Insert" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Update" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Remove" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Departaments" Background="SlateGray" FontSize="16" FontWeight="DemiBold" BorderBrush="Black" BorderThickness="3">
+                <Grid Background="SlateGray">
+                    <TabControl  BorderBrush="Black" BorderThickness="3">
+                        <TabItem Header="Show" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Search" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Insert" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Update" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Remove" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Employees" Background="SlateGray" FontSize="16" FontWeight="DemiBold" BorderBrush="Black" BorderThickness="3">
+                <Grid Background="SlateGray">
+                    <TabControl  BorderBrush="Black" BorderThickness="3">
+                        <TabItem Header="Show" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Search" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Insert" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Update" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                        <TabItem Header="Remove" Background="SlateGray">
+                            <Grid Background="SlateGray"/>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
